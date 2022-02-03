@@ -1,9 +1,13 @@
 {
   "name": "friend_of_all",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "private": true,
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "devDependencies": {
     "@types/jsonwebtoken": "^8.5.8",
     "typescript": "^4.5.5"

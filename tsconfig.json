@@ -11,6 +11,12 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+  },
+  "include": [
+    "src/**/*",
+    "./package.json",
+    "./README.md"
+  ]
 }
