@@ -2,15 +2,13 @@ import Interaction from "domain/Interaction";
 import InteractionDAO from "DAO/InteractionDAO";
 
 class InteractionController {
-  constructor (
-    private interactionDAO: InteractionDAO,
-  ) { }
+  constructor(private interactionDAO: InteractionDAO) {}
 
   createInteraction(interaction: Interaction): Promise<Interaction> {
     return this.interactionDAO.create(interaction);
   }
-  
-  listInteractionByPost(postId: String): Promise<Interaction[]> {
+
+  listInteractionByPost(postId: string): Promise<Interaction[]> {
     return this.interactionDAO.listByPost(postId);
   }
 }

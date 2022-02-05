@@ -1,48 +1,52 @@
 class Post {
-  private _id: String;
-  private _title: String;
-  private _description: String;
-  private _createdAt: String;
+  private _id: string;
+  private _title: string;
+  private _description: string;
+  private _createdAt: string;
 
-  constructor (id: String, title: String, description: String, createdAt: String) {
+  constructor(
+    id: string,
+    title: string,
+    description: string,
+    createdAt: string
+  ) {
     this._id = id;
     this._title = title;
     this._description = description;
     this._createdAt = createdAt;
   }
 
-  get id(): String {
+  get id(): string {
     return this._id;
   }
 
-  get title(): String {
+  get title(): string {
     return this._title;
   }
 
-  get description(): String {
+  get description(): string {
     return this._description;
   }
 
-  get createdAt(): String {
+  get createdAt(): string {
     return this._createdAt;
   }
-  
-  set id(id: String) {
+
+  set id(id: string) {
     this._id = id;
   }
 
-  set title(title: String) {
+  set title(title: string) {
     this._title = title;
   }
 
-  set description(description: String) {
+  set description(description: string) {
     this._description = description;
   }
 
-  set createdAt(createdAt: String) {
+  set createdAt(createdAt: string) {
     this._createdAt = createdAt;
   }
 }
-
 
 export default Post;
