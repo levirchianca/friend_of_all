@@ -12,13 +12,10 @@ interface ITokenPayload {
 }
 
 class UserController {
-  
-  constructor (
-    private userDAO: UserDAO,
-  ) { }
+  constructor(private userDAO: UserDAO) {}
 
   /**
-   * Válida o email do usuário informado, e caso seja válido 
+   * Válida o email do usuário informado, e caso seja válido
    * o persiste no banco
    * @param user Instância da classe User com os dados do usuário
    * @returns User com o id do banco
@@ -57,15 +54,15 @@ class UserController {
   }
 
   /**
-   * Valida o token informado e retorna o usuário dono do token, 
+   * Valida o token informado e retorna o usuário dono do token,
    * caso o mesmo seja válido
    * @param token Token gerado ao fazer login
-   */ 
+   */
   async ensuredAuthenticated(token: string): Promise<User> {
     try {
       const decoded = verify(token, process.env.SECRET_KEY || "default");
 
-      var { sub } =  decoded as ITokenPayload;
+      var { sub } = decoded as ITokenPayload;
     } catch (error) {
       throw new InvalidTokenError();
     }

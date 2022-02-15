@@ -2,9 +2,7 @@ import PostDAO from "DAO/PostDAO";
 import Post from "domain/Post";
 
 abstract class PostController {
-  constructor (
-    private postDAO: PostDAO
-  ) { }
+  constructor(private postDAO: PostDAO) {}
 
   createPost(post: Post): Promise<Post> {
     return this.postDAO.create(post);
@@ -12,17 +10,18 @@ abstract class PostController {
 
   async listPost(
     title?: string,
-    description?: string, 
-    orderBy?: string, 
-    direction?: string, 
-    page: number=1, 
-    limite: number=15): Promise<Post[]> {
+    description?: string,
+    orderBy?: string,
+    direction?: string,
+    page: number = 1,
+    limite: number = 15
+  ): Promise<Post[]> {
     let posts = await this.list(title, description);
 
     posts = await this.order(posts, orderBy, direction);
 
     // Paginação
-    const offset = (page-1) * limite; // índide do primeiro post
+    const offset = (page - 1) * limite; // índide do primeiro post
     const lastposition = offset + limite; // índice do último post
 
     if (lastposition < posts.length) {

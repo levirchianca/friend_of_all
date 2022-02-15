@@ -8,4 +8,4 @@ export {
   InvalidTokenError,
   UserAlreadyExistsError,
   UserNotFoundError,
-}
+};

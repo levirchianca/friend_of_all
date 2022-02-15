@@ -32,7 +32,11 @@ class Post {
   get createdAt(): string {
     return this._createdAt;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 2a5de67872c1d3769c201b9a2be61ed4f72426a6
   set id(id: string) {
     this._id = id;
   }
@@ -49,6 +53,5 @@ class Post {
     this._createdAt = createdAt;
   }
 }
-
 
 export default Post;

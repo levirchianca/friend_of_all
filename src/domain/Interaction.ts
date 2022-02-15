@@ -30,7 +30,7 @@ abstract class Interaction {
   set post(post: Post) {
     this._post = post;
   }
-  
+
   set user(user: User) {
     this._user = user;
   }

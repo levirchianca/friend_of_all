@@ -4,7 +4,7 @@ class User {
   private _password: string;
   private _name: string;
 
-  constructor (email: string, password: string, name: string, id?: string) {
+  constructor(email: string, password: string, name: string, id?: string) {
     this._email = email;
     this._password = password;
     this._name = name;
@@ -16,7 +16,7 @@ class User {
 
   get id(): string {
     return this._id;
-  }  
+  }
 
   get email(): string {
     return this._email;
@@ -29,7 +29,7 @@ class User {
   get name(): string {
     return this._name;
   }
-  
+
   set id(id: string) {
     this._id = id;
   }
