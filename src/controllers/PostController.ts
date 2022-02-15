@@ -37,6 +37,10 @@ abstract class PostController {
   protected abstract list(title?: string, description?: string): Promise<Post[]>;
 
   protected abstract order(posts: Post[], by?: string, direction?: string): Promise<Post[]>;
+
+  public async getPost(id: string): Promise<Post | undefined> {
+    return await this.postDAO.getById(id);
+  }
 }
 
 export default PostController;
