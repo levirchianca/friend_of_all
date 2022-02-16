@@ -6,10 +6,10 @@ abstract class Interaction {
   protected _post: Post;
   protected _user: User;
 
-  constructor (post: Post, user: User, id?: string) {
+  constructor(post: Post, user: User, id?: string) {
     this._post = post;
     this._user = user;
-    
+
     if (id) {
       this._id = id;
     }
@@ -26,7 +26,7 @@ abstract class Interaction {
   get id(): string {
     return this._id;
   }
-  
+
   set post(post: Post) {
     this._post = post;
   }

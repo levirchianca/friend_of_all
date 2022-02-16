@@ -47,9 +47,9 @@ class UserController {
   signin(user: User): string {
     const token = sign({}, process.env.SECRET_KEY || "default", {
       subject: user.id,
-      expiresIn: 999
+      expiresIn: 999,
     });
-    
+
     return token;
   }
 

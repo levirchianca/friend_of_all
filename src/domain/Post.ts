@@ -4,7 +4,12 @@ class Post {
   private _description: string;
   private _createdAt: string;
 
-  constructor (title: string, description: string, id?: string, createdAt?: string) { 
+  constructor(
+    title: string,
+    description: string,
+    id?: string,
+    createdAt?: string
+  ) {
     this._title = title;
     this._description = description;
 
@@ -32,11 +37,7 @@ class Post {
   get createdAt(): string {
     return this._createdAt;
   }
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 2a5de67872c1d3769c201b9a2be61ed4f72426a6
   set id(id: string) {
     this._id = id;
   }
